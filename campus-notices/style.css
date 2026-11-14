@@ -1,5 +1,12 @@
+/* 
+The paragraph selector targets all <p> elements.
+Its color declaration overrides the inherited
+text color from the body element.
+A directly applied declaration takes precedence
+over an inherited value.
+*/
 
-/* Color Variables */
+/* Color Variables - Light Theme */
 :root {
   --brand: #1d4e89;
   --brand-soft: #e0ecf8;
@@ -8,6 +15,18 @@
   --text: #1f2933;
   --border: #d9e2ec;
   --radius: 8px;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #152c46;
+    --brand-soft: #263d55;
+    --surface: #1f2937;
+    --page: #111827;
+    --text: #e5e7eb;
+    --border: #374151;
+  }
 }
 
 /* Box Sizing */
@@ -128,11 +147,3 @@ button {
 button:hover {
   background: #163b69;
 }
-/* 
-The paragraph selector targets all <p> elements.
-Its color declaration overrides the inherited
-text color from the body element.
-A directly applied declaration takes precedence
-over an inherited value.
-*/
-
