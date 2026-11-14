@@ -1,39 +1,51 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page Description -->
+  <meta name="description" content="Campus Notices provides students with the latest academic announcements, campus events, facilities updates, and important deadlines.">
+
   <title>Campus Notices</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
     <h1>Campus Notices</h1>
 
+    <!-- Navigation -->
     <nav aria-label="Main">
       <ul>
         <li><a href="#notices">Notices</a></li>
         <li><a href="#deadlines">Deadlines</a></li>
         <li><a href="#submit">Post a notice</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
 
+    <!-- First Section: Campus Notices -->
     <section id="notices">
       <h2>Latest Campus Notices</h2>
 
+      <!-- First Notice -->
       <article class="notice">
         <h2>Library hours extended</h2>
         <p class="meta">
-          <time datetime="2026-10-12">11 October 2026</time> ·
+          <time datetime="2026-10-12">12 October 2026</time> ·
           <span class="tag">Academic</span>
         </p>
         <p>The library stays open until 9 PM during midterm week.</p>
       </article>
 
+      <!-- Second Notice -->
       <article class="notice">
         <h2>Enrollment schedule announced</h2>
         <p class="meta">
@@ -43,6 +55,7 @@
         <p>Students are advised to check the official enrollment schedule for the upcoming semester.</p>
       </article>
 
+      <!-- Third Notice -->
       <article class="notice">
         <h2>Computer Laboratory Maintenance</h2>
         <p class="meta">
@@ -52,6 +65,7 @@
         <p>The computer laboratory will undergo scheduled maintenance. Students are advised to use the alternative laboratory facilities.</p>
       </article>
 
+      <!-- Categories List -->
       <h3>Notice Categories</h3>
       <ul>
         <li>Academic</li>
@@ -64,7 +78,7 @@
 
     <!-- Second Section: Upcoming Deadlines -->
     <section id="deadlines">
-      <h2>Upcoming deadlines</h2>
+      <h2>Upcoming Deadlines</h2>
 
       <table>
         <caption>Deadlines this month</caption>
@@ -89,8 +103,9 @@
       </table>
     </section>
 
+    <!-- Third Section: Notice Submission Form -->
     <section id="submit">
-      <h2>Post a notice</h2>
+      <h2>Post a Notice</h2>
 
       <form action="#" method="post">
 
@@ -99,19 +114,25 @@
           <input type="text" id="title" name="title" required maxlength="100">
         </p>
 
-        <p>
-          <label for="category">Category</label><br>
-          <select id="category" name="category">
-            <option value="academic">Academic</option>
-            <option value="event">Event</option>
-            <option value="general">General</option>
-          </select>
-        </p>
+        <!-- Grouped Category and Date Fields -->
+        <fieldset>
+          <legend>Notice Details</legend>
 
-        <p>
-          <label for="date">Date</label><br>
-          <input type="date" id="date" name="date">
-        </p>
+          <p>
+            <label for="category">Category</label><br>
+            <select id="category" name="category">
+              <option value="academic">Academic</option>
+              <option value="event">Event</option>
+              <option value="general">General</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="date">Date</label><br>
+            <input type="date" id="date" name="date">
+          </p>
+
+        </fieldset>
 
         <p>
           <label for="message">Message</label><br>
@@ -123,7 +144,24 @@
           <input type="email" id="email" name="email" required>
         </p>
 
-        <button type="submit">Post notice</button>
+        <button type="submit">Post Notice</button>
+
+      </form>
+    </section>
+
+    <!-- Fourth Section: Email Subscription -->
+    <section id="subscribe">
+      <h2>Subscribe to Campus Notices</h2>
+      <p>Subscribe to receive updates about campus announcements and upcoming activities.</p>
+
+      <form action="#" method="post">
+
+        <p>
+          <label for="subscriber-email">Email Address</label><br>
+          <input type="email" id="subscriber-email" name="subscriber-email" required>
+        </p>
+
+        <button type="submit">Subscribe</button>
 
       </form>
     </section>
