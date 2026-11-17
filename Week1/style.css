@@ -5,6 +5,7 @@ text color from the body element.
 A directly applied declaration takes precedence
 over an inherited value.
 */
+
 /* Color Variables - Light Theme */
 :root {
   --brand: #1d4e89;
