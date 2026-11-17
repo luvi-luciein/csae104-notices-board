@@ -1,0 +1,209 @@
+/* ==========================================================
+   1. Base / Reset
+   ========================================================== */
+:root {
+  --green: #145D16;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: black;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+}
+
+/* ==========================================================
+   2. Header (logo + name, thick green line below)
+   ========================================================== */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 76px;
+  background: white;
+  border-bottom: 12px solid green;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 22px;
+}
+
+/* ==========================================================
+   3. Page body: nav and campus images
+   ========================================================== */
+.page-body {
+  flex: 1;
+  position: relative;       /* the image column is placed inside this */
+  overflow: hidden;         /* the bottom image runs off the right edge */
+  height: 100px;        /* keeps the page height now that the form is unstyled */
+  padding-bottom: 44px;
+}
+
+/* ---------- Navigation ---------- */
+.main-nav {
+  display: flex;
+  gap: 24px;
+  padding: 8px 11px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.main-nav a {
+  color: black;
+  text-decoration: none;  
+}
+
+.main-nav a:hover {
+  color: var(--green);
+}
+/* Base styles for the links */
+.main-nav a {
+  text-decoration-style: dashed; /* Optional: adds a dashed underline */
+  color: #333;
+  display: inline-block; /* Required for the transform property to work smoothly on inline elements */
+  padding: 8px 12px;
+  transition: transform 0.3s ease, color 0.3s ease; /* Makes the zoom smooth */
+}
+
+/* Zoom effect on hover */
+.main-nav a:hover {
+  transform: scale(1.2); /* Scales the link up to 120% of its normal size */
+  color: #3208ec;        /* Optional: Changes the color to blue when zoomed */
+}
+
+/* ---------- Campus images (staggered, diagonal) ---------- */
+.gallery-column {
+  position: absolute;
+  top: 18px;
+  left: 46.3%;
+  width: 53.7%;
+}
+
+.gallery-img {
+  object-fit: cover;
+  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.45);
+}
+
+.img-top {
+  margin-left: 24%;          /* pushed toward the right */
+  width: 68.6%;
+  aspect-ratio: 503 / 161;
+}
+
+.img-middle {
+  margin-top: 4px;           /* sits further left */
+  width: 74.2%;
+  aspect-ratio: 544 / 205;
+}
+
+.img-bottom {
+  margin-top: 21px;
+  margin-left: 13.6%;        /* right again, runs past the screen edge */
+  width: 88.7%;
+  aspect-ratio: 650 / 190;
+}
+
+/* ==========================================================
+   3b. Login section (left column)
+   ========================================================== */
+
+/* Position and width of the whole section.
+   Change margin-left to move it sideways, margin-top to move it up/down,
+   and width to make it wider/narrower. */
+.login-column {
+  margin: 39px 10%;
+  width: 32%;
+}
+
+/* The box with the border.
+   Change border, border-radius and padding to adjust the frame. */
+.login-column form {
+  display: grid;
+  grid-template-columns: 140px 1fr;   /* labels on the left, inputs on the right */
+  align-items: center;
+  gap: 45px 24px;                     /* row gap, column gap */
+  padding: 20px 30px 50px;
+  background: white;
+  border: 5px solid black;     /* thickness of the border */
+  border-radius: 45px;                /* roundness of the corners */
+}
+
+/* Heading spans both columns and is centered */
+.login-column h3 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 70;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.login-column label {
+  text-align: center;                 /* use left or right to change alignment */
+  font-size: 25px;
+  font-weight: 70;
+}
+
+/* Input fields (pill shape) */
+.login-column input {
+  width: 90%;
+  height: 49px;
+  padding: 10px;
+  font-size: 10px;
+  font-family: inherit;
+  border: 3px solid black;
+  border-radius: 23px;
+  background: white;
+}
+
+/* Button spans both columns; use justify-self: start / center / end to align it */
+.login-column button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 140px;
+  height: 42px;
+  margin-top: 9px;
+  background: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 20;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+
+.login-column button:hover {
+  background: green;
+}
+
+/* ==========================================================
+   4. Footer
+   ========================================================== */
+.site-footer {
+  background: white;
+  border-top: 8px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+}
