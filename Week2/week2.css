@@ -1,6 +1,3 @@
-/* ==========================================================
-   1. Base / Reset
-   ========================================================== */
 :root {
   --green: #145D16;
   --white: #FFFFFF;
@@ -26,10 +23,6 @@ body {
 img {
   display: block;
 }
-
-/* ==========================================================
-   2. Header (logo + name, thick green line below)
-   ========================================================== */
 .site-header {
   display: flex;
   align-items: center;
@@ -49,18 +42,15 @@ img {
   font-size: 22px;
 }
 
-/* ==========================================================
-   3. Page body: nav and campus images
-   ========================================================== */
 .page-body {
   flex: 1;
-  position: relative;       /* the image column is placed inside this */
-  overflow: hidden;         /* the bottom image runs off the right edge */
-  height: 100px;        /* keeps the page height now that the form is unstyled */
+  position: relative;       
+  overflow: hidden;        
+  height: 100px;    
   padding-bottom: 44px;
 }
 
-/* ---------- Navigation ---------- */
+/* navigate */
 .main-nav {
   display: flex;
   gap: 24px;
@@ -81,7 +71,7 @@ img {
 .main-nav a {
   text-decoration-style: dashed; /* Optional: adds a dashed underline */
   color: #333;
-  display: inline-block; /* Required for the transform property to work smoothly on inline elements */
+  display: inline-block; 
   padding: 8px 12px;
   transition: transform 0.3s ease, color 0.3s ease; /* Makes the zoom smooth */
 }
@@ -92,7 +82,7 @@ img {
   color: #3208ec;        /* Optional: Changes the color to blue when zoomed */
 }
 
-/* ---------- Campus images (staggered, diagonal) ---------- */
+/* Campus images (staggered, diagonal)  */
 .gallery-column {
   position: absolute;
   top: 18px;
@@ -124,20 +114,15 @@ img {
   aspect-ratio: 650 / 190;
 }
 
-/* ==========================================================
-   3b. Login section (left column)
-   ========================================================== */
+/* 3b. Login section (left column) */
 
-/* Position and width of the whole section.
-   Change margin-left to move it sideways, margin-top to move it up/down,
-   and width to make it wider/narrower. */
+/* Position and width of the whole section. */
 .login-column {
   margin: 39px 10%;
   width: 32%;
 }
 
-/* The box with the border.
-   Change border, border-radius and padding to adjust the frame. */
+/* The box with the border. */
 .login-column form {
   display: grid;
   grid-template-columns: 140px 1fr;   /* labels on the left, inputs on the right */
@@ -161,7 +146,7 @@ img {
 
 /* Labels */
 .login-column label {
-  text-align: center;                 /* use left or right to change alignment */
+  text-align: center;                 
   font-size: 25px;
   font-weight: 70;
 }
@@ -197,9 +182,7 @@ img {
   background: green;
 }
 
-/* ==========================================================
-   4. Footer
-   ========================================================== */
+/* 4. Footer */
 .site-footer {
   background: white;
   border-top: 8px solid green;
