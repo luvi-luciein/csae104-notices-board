@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;  
+    place-items: center;
+    font-family: system-ui, sans-serif;
+    background: linear-gradient(135deg, #48c05e, #aed69b);
+}
+
+.card {
+    background: white;
+    padding: 28px 36px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+    text-align: center; 
+}
+
+#btn {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: #22cd41;
+    color: white;
+    cursor: pointer;
+}
+
+#btn1 {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: #222acd;
+    color: white;
+    cursor: pointer;
+}
+
+#btn2 {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: #c73423;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #087da5;
+}   
